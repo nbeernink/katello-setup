@@ -1,0 +1,18 @@
+---
+- name: Install puppetlabs repo
+  yum:
+    name:
+      - https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
+      - https://yum.theforeman.org/client/1.21/el7/x86_64/foreman-client-release.rpm
+
+- name: Install packages
+  yum:
+    name:
+      - epel-release
+      - vim-enhanced
+      - katello-host-tools
+      - katello-agent
+      - katello-host-tools-tracer
+      - puppet
+      - telnet
+

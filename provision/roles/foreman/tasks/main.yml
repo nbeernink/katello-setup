@@ -1,0 +1,15 @@
+---
+- name: Install required repositories
+  yum:
+    name:
+      - https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
+      - http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+      - https://yum.theforeman.org/releases/1.21/el7/x86_64/foreman-release.rpm
+      - https://fedorapeople.org/groups/katello/releases/yum/3.11/katello/el7/x86_64/katello-repos-latest.rpm
+- name: Install packages
+  yum:
+    name:
+      - foreman-release-scl
+      - foreman-proxy-content
+      - katello
+      - vim-enhanced
